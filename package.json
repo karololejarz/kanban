@@ -1,0 +1,50 @@
+{
+  "name": "Kanban",
+  "version": "1.0.0",
+  "description": "https://karololejarz.github.io/kanban/",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm-run-all test:*",
+    "test:html": "globstar nu-html-checker *.html",
+    "test:js": "globstar jshint js/*.js",
+    "init-project": "npm install && npm-run-all init:*",
+    "init:dirs": "mkdirp sass css vendor images js",
+    "init:files": "touch README.md index.html sass/style.scss js/script.js",
+    "init:gitignore": "curl https://raw.githubusercontent.com/github/gitignore/master/Node.gitignore -o .gitignore",
+    "build:clean": "rimraf css/lib/*",
+    "build": "npm-run-all build:* test",
+    "build:sass": "node-sass --output-style compact -o css sass",
+    "build:autoprefixer": "autoprefixer-cli css/style.css",
+    "build-dev:sass": "node-sass --output-style expanded --source-map true -o css sass",
+    "watch": "npm-run-all build -p watch:*",
+    "watch:sassprefixer": "onchange -d 100 sass/*.css -- run-npm-all sassprefixer:*",
+    "sassprefixer:sass": "node-sass --output-style expanded --source-map true -o css sass",
+    "sassprefixer:autoprefixer": "autoprefixer-cli -o css/style.css",
+    "watch:browsersync": "browser-sync --reload-delay 100 start --server --files \"*.css\" \".html\" "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/karololejarz/kanban.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/karololejarz/kanban/issues"
+  },
+  "homepage": "https://github.com/karololejarz/kanban#readme",
+  "devDependencies": {
+    "autoprefixer-cli": "^1.0.0",
+    "browser-sync": "^2.23.7",
+    "globstar": "^1.0.0",
+    "mkdirp": "^0.5.1",
+    "node-sass": "^4.9.0",
+    "npm-run-all": "^4.1.2",
+    "nu-html-checker": "^0.1.0",
+    "onchange": "^3.3.0",
+    "rimraf": "^2.6.2"
+  },
+  "dependencies": {
+    "jshint": "^2.9.5"
+  }
+}

@@ -1,0 +1,88 @@
+.board {
+  background: url(https://source.unsplash.com/r0qQKbXcEgs);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  padding: 1rem;
+  text-align: center;    
+
+  h1 {
+    color: white;
+    font-size: 3rem;    
+  }
+
+  button {
+    background-color: orange;
+    border: none;
+    font-size: 1.25rem;
+    margin: 0.5rem;
+    padding: 0.5rem;
+  }
+
+  button:hover {
+    border: 0.25rem solid black;
+    cursor: pointer;
+    margin: 0.25rem;
+  }
+
+  .btn-delete {
+    background-color: crimson;
+    border-radius: 50%;
+  }
+
+  .column-container {
+    align-items: center;
+    display: flex;
+    flex-direction: row;    
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+.column {      
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 5%;
+  display: inline-block;
+  margin: 1rem;
+  min-height: 300px; 
+  min-width: 150px;
+  width: 25vw;
+
+  .btn-delete {
+    margin-right: 0.5rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  .add-card {
+    border-radius: 5%;
+    background-color: lightblue;
+  }
+
+  ul {
+    padding: 0;
+  }
+}
+
+.column-card-list {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;        
+  min-height: 150px;
+}
+      
+.card {
+  background-color: yellow;
+  border-radius: 5%;
+  list-style-type: none;
+  margin: 1rem;
+          
+  p {
+    padding: 0.5rem;
+  }
+}
+ 
