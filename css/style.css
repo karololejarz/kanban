@@ -1,4 +1,4 @@
-.board { background: url(https://source.unsplash.com/r0qQKbXcEgs); background-repeat: no-repeat; background-size: cover; min-height: 100vh; padding: 1rem; text-align: center; }
+.board { background: url(https://source.unsplash.com/ZnOqBzHaDVQ); background-repeat: no-repeat; background-size: cover; min-height: 100vh; padding: 1rem; text-align: center; }
 
 .board h1 { color: white; font-size: 3rem; }
 
@@ -16,7 +16,7 @@
 
 .column h2 { font-size: 2rem; }
 
-.column .add-card { border-radius: 5%; background-color: lightblue; }
+.column .column-add-card { background-color: yellow; }
 
 .column ul { padding: 0; }
 

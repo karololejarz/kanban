@@ -9,9 +9,9 @@ function Column(id, name) {
     var column = $('<div class="column"></div>');
     var columnTitle = $('<h2 class="column-title">' + self.name + '</h2>');
     var columnCardList = $('<ul class="column-card-list"></ul>');
-    var columnDelete = $('<button class="btn-delete">Delete column</button>');
-    var columnEdit = $('<button class="btn-edit">Edit column</button>');
-    var columnAddCard = $('<button class="column-add-card">Add card</button>');
+    var columnDelete = $('<button class="btn-delete"><i class="fas fa-trash-alt"></i></button>');
+    var columnEdit = $('<button class="btn-edit"><i class="far fa-edit"></i></button>');
+    var columnAddCard = $('<button class="column-add-card"><i class="far fa-plus-square"></i></button>');
 
     column.attr('id', self.id);
     column.attr('name', self.name);    
